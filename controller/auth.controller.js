@@ -29,6 +29,7 @@ exports.login = async (req, res, next) => {
         }
         res.status(200).json({
             email: user.email,
+            id: user.id,
             jwt: jwt.sign({
                 email: user.email,
                 id: user.id
